@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:initial_project/app_controller.dart';
+import 'package:initial_project/login_page.dart';
 
 import 'home_page.dart';
 
@@ -14,7 +15,7 @@ class AppWidget extends StatelessWidget {
             primarySwatch: Colors.red,
             brightness: AppController.instance.isDartTheme ? Brightness.dark : Brightness.light,
             ),
-            home: HomePage(),
+            home: LoginPage(),
         );
       },
     );
