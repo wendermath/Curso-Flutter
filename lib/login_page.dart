@@ -21,6 +21,13 @@ class _LoginPageState extends State<LoginPage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                Container(
+                  width: 200,
+                  height: 200,
+                  child: Image.network(
+                      'https://genz.com.py/assets/images/logos/genz-logo.png'),
+                ),
+                Container(),
                 TextField(
                   onChanged: (text) {
                     email = text;
@@ -46,9 +53,7 @@ class _LoginPageState extends State<LoginPage> {
                 ElevatedButton(
                   onPressed: () {
                     if (email == 'wender@genz.com.py' && password == '1234') {
-                      Navigator.of(context).pushReplacement(
-                        MaterialPageRoute(builder: (context) => HomePage()),
-                      );
+                      Navigator.of(context).pushReplacementNamed('/home');
                     } else {
                       print('Login Invalido');
                     }
